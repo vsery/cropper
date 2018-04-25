@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <div id="scissorsContainer">
+        <input id="imageInput" type="file" hidden onchange="ImageInputChanged(event)">
+        <label class="btn" for="imageInput">SELECT IMAGE</label>
+        <div id="workArea" onmousedown="startDrag(event)">
+            <div id="overlay">
+                <div id="overlayInner"></div>
+                <img id="avatorImg" onload="avatorImgChanged()" alt="">
+            </div>
+        </div>
+        <div id="resizeBox">
+            <div>
+                <button class="btn" onclick="resizeDown()">缩小</button>
+                <button class="btn" onclick="resizeUp()">放大</button>
+            </div>
+        </div>
+        <button class="btn" onclick="crop()">CROP</button>
+    </div>
+    <h4>Image Show</h4>
+    <img id="imageShow" src="" alt=""> 作者：classlfz 链接：https://www.jianshu.com/p/d1bbdfb8ee7e 來源：简书 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+</body>
+<script type="text/javascript" src="js/main.js"></script>
+</html>
